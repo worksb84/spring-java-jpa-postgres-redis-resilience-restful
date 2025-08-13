@@ -1,5 +1,3 @@
-# Sample
-
 ### Dependencies
 
 * Spring Web
