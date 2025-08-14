@@ -1,9 +1,11 @@
 ### Dependencies
 
-* Spring Web
-* Spring Data JDBC
-* Spring Data Redis (Access+Driver)
+* Web
+* JDBC
+* Redis (Access+Driver)
 * Resilience4J
-* Spring Boot DevTools
-* Spring Boot Actuator
+* DevTools
+* Actuator
+* Log4j2
+* JPA
 
