@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.annotation.ErrorLog;
 import com.example.demo.domain.User;
 import com.example.demo.service.UserCommandService;
 
@@ -24,11 +25,13 @@ public class UserCommandController {
     @Autowired
     private UserCommandService userCommandService;
 
+    @ErrorLog
     @PostMapping("/create")
     public void create(@RequestBody User user) {
         userCommandService.create(user);
     }
 
+    @ErrorLog
     @PutMapping("/update")
     public void update(@RequestBody User user) {
         userCommandService.update(user);

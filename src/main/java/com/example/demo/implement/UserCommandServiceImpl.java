@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.annotation.ErrorLog;
 import com.example.demo.domain.User;
 import com.example.demo.exception.BaseException;
 import com.example.demo.exception.NotFoundException;
@@ -22,6 +23,7 @@ public class UserCommandServiceImpl implements UserCommandService {
     @Autowired
     private UserRepository userRepository;
 
+    @ErrorLog
     @Override
     public void create(User user) {
         // logger.debug("", user);
