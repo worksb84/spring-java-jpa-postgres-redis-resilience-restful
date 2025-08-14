@@ -1,13 +1,13 @@
 package com.example.demo.domain;
 
-import java.sql.Date;
-
-import org.springframework.data.annotation.Id;
+import java.sql.Timestamp;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,23 +18,24 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
+@Table(name = "hotel_masters")
 public class HotelMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String nameKor;
     private String nameEng;
     private String locationKor;
     private String locationEng;
     private String gradeCode;
-    private Double averageRating;
+    private double averageRating;
     private String address;
-    private Double defaultPrice;
-    private Double discountRate;
-    private Double latitude;
-    private Double longitude;
-    private Date createdAt;
+    private double defaultPrice;
+    private double discountRate;
+    private double latitude;
+    private double longitude;
+    private Timestamp createdAt;
     @Nullable
-    private Date modifiedAt;
-    private Date deletedAt;
+    private Timestamp modifiedAt;
+    private Timestamp deletedAt;
 }

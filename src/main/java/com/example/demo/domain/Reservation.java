@@ -1,12 +1,12 @@
 package com.example.demo.domain;
 
-import java.sql.Date;
-
-import org.springframework.data.annotation.Id;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,20 +17,21 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
+@Table(name = "reservations")
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String reservationCode;
-    private Long userId;
+    private long userId;
     private String productTypeCode;
-    private Long productMasterId;
-    private Long productDetailId;
-    private Double adultPrice;
-    private Long adultCount;
-    private Double childPrice;
-    private Long childCount;
-    private Double infantPrice;
-    private Long infantCount;
-    private Date createdAt;
+    private long productMasterId;
+    private long productDetailId;
+    private double adultPrice;
+    private long adultCount;
+    private double childPrice;
+    private long childCount;
+    private double infantPrice;
+    private long infantCount;
+    private Timestamp createdAt;
 }
